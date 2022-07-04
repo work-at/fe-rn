@@ -8,7 +8,7 @@ import {
 
 import WebViewWrapper from './component/WebViewWrapper';
 
-const BASE_URL = 'https://www.naver.com';
+const BASE_URL = 'https://gleeful-douhua-01be3a.netlify.app/';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
