@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "WorkAt.app"
-               BlueprintName = "WorkAt"
-               ReferencedContainer = "container:WorkAt.xcodeproj">
+               BuildableName = "Workat_.app"
+               BlueprintName = "Workat_"
+               ReferencedContainer = "container:Workat_.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "WorkAtTests.xctest"
-               BlueprintName = "WorkAtTests"
-               ReferencedContainer = "container:WorkAt.xcodeproj">
+               BuildableName = "Workat_Tests.xctest"
+               BlueprintName = "Workat_Tests"
+               ReferencedContainer = "container:Workat_.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "WorkAt.app"
-            BlueprintName = "WorkAt"
-            ReferencedContainer = "container:WorkAt.xcodeproj">
+            BuildableName = "Workat_.app"
+            BlueprintName = "Workat_"
+            ReferencedContainer = "container:Workat_.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "WorkAt.app"
-            BlueprintName = "WorkAt"
-            ReferencedContainer = "container:WorkAt.xcodeproj">
+            BuildableName = "Workat_.app"
+            BlueprintName = "Workat_"
+            ReferencedContainer = "container:Workat_.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
