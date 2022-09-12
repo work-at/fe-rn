@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
-import {
-  StatusBar,
-  useColorScheme,
-} from 'react-native';
-import { PERMISSIONS, requestMultiple } from 'react-native-permissions';
+import React, {useEffect, useState} from 'react';
+import {StatusBar, useColorScheme, ImageBackground} from 'react-native';
+import {PERMISSIONS, requestMultiple} from 'react-native-permissions';
+import SplashScreen from 'react-native-splash-screen';
+import Lottie from 'lottie-react-native';
 
 import WebViewWrapper from './component/WebViewWrapper';
 
@@ -22,13 +21,42 @@ const App = () => {
   };
 
   useEffect(() => {
-    requestMultiplePermissions();
-  }, [])
+    setTimeout(() => {
+      requestMultiplePermissions();
+    }, 6000)
+  }, []);
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
+  const [appLoaded, setAppLoaded] = useState(false);
+  const [webviewTrigger, setWebviewTrigger] = useState(false);
+  
+  useEffect(() => {
+    setTimeout(() => {
+      setAppLoaded(true);
+    }, 3000);
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setWebviewTrigger(true);
+    }, 2000);
+  }, []);
+
 
   return (
     <>
+      {!appLoaded && (
+        <ImageBackground
+          source={require('./assets/launch_screen.jpg')}
+          resizeMode="cover" style={{width: '100%', height: '100%'}}>
+          <Lottie source={require('./assets/splash.json')} autoPlay />
+        </ImageBackground>
+      )}
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <WebViewWrapper uri={BASE_URL} />
+      {webviewTrigger && <WebViewWrapper uri={BASE_URL} startInLoadingState={webviewTrigger} />}
     </>
   );
 };
