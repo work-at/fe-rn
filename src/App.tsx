@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {StatusBar, useColorScheme, ImageBackground} from 'react-native';
 import {PERMISSIONS, requestMultiple} from 'react-native-permissions';
 import SplashScreen from 'react-native-splash-screen';
@@ -28,8 +28,12 @@ const App = () => {
 
   useEffect(() => {
     SplashScreen.hide();
+    setTimeout(() => {
+      animationRef.current?.play()
+    }, 100)
   }, []);
 
+  const animationRef = useRef<Lottie>(null)
   const [appLoaded, setAppLoaded] = useState(false);
   const [webviewTrigger, setWebviewTrigger] = useState(false);
   
@@ -52,7 +56,7 @@ const App = () => {
         <ImageBackground
           source={require('./assets/launch_screen.jpg')}
           resizeMode="cover" style={{width: '100%', height: '100%'}}>
-          <Lottie source={require('./assets/splash.json')} autoPlay />
+          <Lottie ref={animationRef} source={require('./assets/splash.json')} autoPlay />
         </ImageBackground>
       )}
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
