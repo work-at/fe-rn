@@ -34,7 +34,7 @@ const WebViewWrapper = ({uri, ...restProps}: WebViewWrapperProps) => {
   return (
     <WebView
       ref={webview}
-      pullToRefreshEnabled={true}
+      pullToRefreshEnabled={false}
       startInLoadingState={true}
       allowsBackForwardNavigationGestures={true}
       source={{uri}}
